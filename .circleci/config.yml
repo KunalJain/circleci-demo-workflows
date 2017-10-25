@@ -9,6 +9,9 @@ jobs:
       - run:
         name: Echo message
         command: echo "I am running on macos"
+      - run:
+        name: Echo message
+        command: echo "I am running new macos"
   build:
     docker:
       - image: circleci/ruby:2.4-node
