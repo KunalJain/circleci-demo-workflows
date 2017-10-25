@@ -1,6 +1,11 @@
 version: 2.0
 
 jobs:
+  build-and-test:
+    macos:
+      xcode: "8.3.3"
+    steps:  
+      - echo "Running"
   build:
     docker:
       - image: circleci/ruby:2.4-node
@@ -17,6 +22,7 @@ jobs:
       - run:
           name: Run tests
           command: rake
+          
 
 workflows:
   version: 2
