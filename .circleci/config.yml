@@ -4,8 +4,11 @@ jobs:
   build-and-test:
     macos:
       xcode: "8.3.3"
-    steps:  
-      - echo "Running"
+    steps: 
+      - checkout
+      - run:
+        name: Echo message
+        command: echo "I am running on macos"
   build:
     docker:
       - image: circleci/ruby:2.4-node
